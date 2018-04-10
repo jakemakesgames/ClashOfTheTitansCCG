@@ -593,6 +593,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114379484869765482, guid: 0c0f9cc6c16502045859b15f2389da0c,
+        type: 2}
+      propertyPath: cardAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 89aaa11873d48624b8e6521d0ad9187c,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c0f9cc6c16502045859b15f2389da0c, type: 2}
   m_IsPrefabParent: 0
@@ -643,6 +649,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4884930327529334, guid: 3befc950fbc42cb48815b844408e92ce,
     type: 2}
   m_PrefabInternal: {fileID: 1211296477}
+--- !u!114 &693182072 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114859023470660286, guid: 020aacdc19d8b0b498d8a76965cb9f63,
+    type: 2}
+  m_PrefabInternal: {fileID: 394376364}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &783277065
 Prefab:
   m_ObjectHideFlags: 0
@@ -1625,6 +1637,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114761461754651906, guid: 8bbe41727ca60e34aa9aef8f0b075169,
+        type: 2}
+      propertyPath: HeroPowerIconImage
+      value: 
+      objectReference: {fileID: 2002825096}
+    - target: {fileID: 114761461754651906, guid: 8bbe41727ca60e34aa9aef8f0b075169,
+        type: 2}
+      propertyPath: HeroPowerBackgroundImage
+      value: 
+      objectReference: {fileID: 693182072}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8bbe41727ca60e34aa9aef8f0b075169, type: 2}
   m_IsPrefabParent: 0
@@ -1633,6 +1655,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4485292319102932, guid: 8bbe41727ca60e34aa9aef8f0b075169,
     type: 2}
   m_PrefabInternal: {fileID: 1875217350}
+--- !u!114 &2002825096 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114125256139601162, guid: 020aacdc19d8b0b498d8a76965cb9f63,
+    type: 2}
+  m_PrefabInternal: {fileID: 394376364}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &2006452962
 GameObject:
   m_ObjectHideFlags: 0
