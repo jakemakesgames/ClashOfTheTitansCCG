@@ -15,12 +15,12 @@ public class MessageManager : MonoBehaviour
         MessagePanel.SetActive(false);
     }
 
-    public void ShowMessage(string Message, float Duration)//, Command com)
+    public void ShowMessage(string Message, float Duration, Command com)
     {
-        StartCoroutine(ShowMessageCoroutine(Message, Duration));//, com));
+        StartCoroutine(ShowMessageCoroutine(Message, Duration, com));
     }
 
-    IEnumerator ShowMessageCoroutine(string Message, float Duration)//, Command com)
+    IEnumerator ShowMessageCoroutine(string Message, float Duration, Command com)
     {
         //Debug.Log("Showing some message. Duration: " + Duration);
         MessageText.text = Message;
@@ -35,6 +35,7 @@ public class MessageManager : MonoBehaviour
     }
 
     // DEBUGGING ONLY - DELETE THE UPDATE FUNCTION LATER //
+    /*
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Y))
@@ -47,4 +48,5 @@ public class MessageManager : MonoBehaviour
             ShowMessage("Enemy Turn", 3f);
         }
     }
+    */
 }
