@@ -6,6 +6,9 @@ using DG.Tweening;
 // this class will take care of switching turns and counting down time until the turn expires
 public class TurnManager : MonoBehaviour {
 
+    // PUBLIC FIELD
+    public CardAsset CoinCard;
+
     private RopeTimer timer;
 
     // for Singleton Pattern
@@ -47,7 +50,7 @@ public class TurnManager : MonoBehaviour {
 
     void Start()
     {
-        OnGameStart();
+        // FIX LATER OnGameStart();
     }
 
     public void OnGameStart()
@@ -95,12 +98,14 @@ public class TurnManager : MonoBehaviour {
                 whoGoesSecond.DrawACard(true);
                 //new GivePlayerACoinCommand(null, whoGoesSecond).AddToQueue();
                 whoGoesSecond.DrawACoin();
+                //whoGoesSecond.GetACardNotFromDeck(CoinCard);
                 new StartATurnCommand(whoGoesFirst).AddToQueue();
             });
     }
 
     void Update()
     {
+        // DEBUG CODE //
         if (Input.GetKeyDown(KeyCode.Space))
             EndTurn();
     }

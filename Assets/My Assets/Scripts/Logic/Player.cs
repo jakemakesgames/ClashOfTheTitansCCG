@@ -141,7 +141,9 @@ public class Player : MonoBehaviour, ICharacter
        
     }
 
-    public void DrawACoin()
+
+
+    public void DrawACoin()//(CardAsset cardAsset)
     {
         if (hand.CardsInHand.Count < PArea.handVisual.slots.Children.Length)
         {
