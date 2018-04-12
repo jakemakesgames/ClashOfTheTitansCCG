@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 4309589435419306}
   - component: {fileID: 212929459715530776}
   m_Layer: 0
-  m_Name: Trinagle
+  m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -288,8 +288,8 @@ GameObject:
   - component: {fileID: 212837031571711244}
   - component: {fileID: 65169817262938110}
   - component: {fileID: 114060251212524328}
-  - component: {fileID: 114597281045736784}
-  - component: {fileID: 114440724053286950}
+  - component: {fileID: 114515588533394876}
+  - component: {fileID: 114455797886034496}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -340,6 +340,7 @@ GameObject:
   - component: {fileID: 4035159502976138}
   - component: {fileID: 114625794687183478}
   - component: {fileID: 114132684969770914}
+  - component: {fileID: 114377671640142474}
   m_Layer: 0
   m_Name: TargetedSpellCard
   m_TagString: Untagged
@@ -810,8 +811,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1389130969833420}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -4.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224232891811697654}
@@ -1399,6 +1400,17 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114377671640142474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1389130969833420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ce79bccf7d5aa4f8d02908e60b77b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114414010918250282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1413,18 +1425,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
---- !u!114 &114440724053286950
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1358645974349070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f795388a6280c474298ab5fadb5b2c00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UsePointerDisplacement: 1
 --- !u!114 &114455112932210696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1458,6 +1458,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Spell
+--- !u!114 &114455797886034496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358645974349070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9509d44afc75d2a4296a3a9fa4f27b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Targets: 4
 --- !u!114 &114459288903187748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1485,6 +1497,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114515588533394876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358645974349070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822ba796511367741b7fe1254c4a6e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114543426732120678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1553,18 +1576,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
---- !u!114 &114597281045736784
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1358645974349070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6114622515e18149bcc1b9a727c4961, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Targets: 4
 --- !u!114 &114617556023955534
 MonoBehaviour:
   m_ObjectHideFlags: 1
