@@ -1087,6 +1087,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2006452963}
     m_Modifications:
+    - target: {fileID: 114901676158530134, guid: 53692f14856c2cb45adb6e79e8237f98,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4983509904066270, guid: 53692f14856c2cb45adb6e79e8237f98, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1153,6 +1158,31 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 44.009
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901676158530134, guid: 53692f14856c2cb45adb6e79e8237f98,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901676158530134, guid: 53692f14856c2cb45adb6e79e8237f98,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901676158530134, guid: 53692f14856c2cb45adb6e79e8237f98,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1033394519}
+    - target: {fileID: 114901676158530134, guid: 53692f14856c2cb45adb6e79e8237f98,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndTurnTest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901676158530134, guid: 53692f14856c2cb45adb6e79e8237f98,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53692f14856c2cb45adb6e79e8237f98, type: 2}
@@ -1222,7 +1252,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1033394519}
-        m_MethodName: EndTurn
+        m_MethodName: EndTurnTest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1442,7 +1472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1305376700
 Transform:
   m_ObjectHideFlags: 0
