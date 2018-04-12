@@ -6,15 +6,21 @@ using System;
 [System.Serializable]
 public class CardLogic: IIdentifiable
 {
+    // reference to a player who holds this card in his hand
     public Player owner;
+    // an ID of this card
     public int UniqueCardID; 
-
+    // a reference to the card asset that stores all the info about this card
     public CardAsset ca;
-    public GameObject VisualRepresentation;
-
-    private int baseManaCost;
+    // a script of type spell effect that will be attached to this card when it`s created
     public SpellEffect effect;
 
+
+    // STATIC (for managing IDs)
+    public static Dictionary<int, CardLogic> CardsCreatedThisGame = new Dictionary<int, CardLogic>();
+
+
+    // PROPERTIES
     public int ID
     {
         get{ return UniqueCardID; }
@@ -37,26 +43,30 @@ public class CardLogic: IIdentifiable
         }
     }
 
+    // CONSTRUCTOR
     public CardLogic(CardAsset ca)
     {
+        // set the CardAsset reference
         this.ca = ca;
+        // get unique int ID
         UniqueCardID = IDFactory.GetUniqueID();
         //UniqueCardID = IDFactory.GetUniqueID();
-        baseManaCost = ca.ManaCost;
         ResetManaCost();
+        // create an instance of SpellEffect with a name from our CardAsset
+        // and attach it to 
         if (ca.SpellScriptName!= null && ca.SpellScriptName!= "")
         {
             effect = System.Activator.CreateInstance(System.Type.GetType(ca.SpellScriptName)) as SpellEffect;
+            //effect.ArmorPiercing = ca.ArmorPiercing; 
         }
+        // add this card to a dictionary with its ID as a key		
         CardsCreatedThisGame.Add(UniqueCardID, this);
     }
 
+    // method to set or reset mana cost
     public void ResetManaCost()
     {
-        CurrentManaCost = baseManaCost;
+        CurrentManaCost = ca.ManaCost;
     }
-
-    // STATIC (for managing IDs)
-    public static Dictionary<int, CardLogic> CardsCreatedThisGame = new Dictionary<int, CardLogic>();
 
 }
