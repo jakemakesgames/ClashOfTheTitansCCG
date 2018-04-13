@@ -95,6 +95,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4884930327529334}
+  - component: {fileID: 114551795997211504}
   m_Layer: 0
   m_Name: HandVisual
   m_TagString: Untagged
@@ -352,7 +353,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1529863891971098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.5, z: 0}
+  m_LocalPosition: {x: 0, y: -6.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4450400702451708}
@@ -381,3 +382,21 @@ MonoBehaviour:
   - {fileID: 4589377184363556}
   - {fileID: 4512313529155528}
   - {fileID: 4479596671947972}
+--- !u!114 &114551795997211504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529863891971098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0ebb57c54a2204a90b20b1b01ef27c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: 1
+  TakeCardsOpenly: 1
+  slots: {fileID: 114490449040443860}
+  DrawPreviewSpot: {fileID: 0}
+  DeckTransform: {fileID: 0}
+  OtherCardDrawSourceTransform: {fileID: 0}
+  PlayPreviewSpot: {fileID: 0}

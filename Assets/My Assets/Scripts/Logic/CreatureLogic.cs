@@ -14,6 +14,7 @@ public class CreatureLogic: ICharacter
     {
         get{ return UniqueCreatureID; }
     }
+    // TURN TO STONE
     public bool Frozen = false;
 
     // the basic health that we have in CardAsset
@@ -33,7 +34,7 @@ public class CreatureLogic: ICharacter
         set
         {
             if (value > MaxHealth)
-                health = baseHealth;
+                health = MaxHealth;
             else if (value <= 0)
                 Die();
             else

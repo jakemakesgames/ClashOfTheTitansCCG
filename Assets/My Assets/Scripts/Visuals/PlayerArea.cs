@@ -12,7 +12,7 @@ public class PlayerArea : MonoBehaviour
     public HandVisual handVisual;
     public PlayerPortraitVisual Portrait;
     public HeroPowerButton HeroPower;
-    public EndTurnButton EndTurnButton;
+    //public EndTurnButton EndTurnButton;
     public TableVisual tableVisual;
     public Transform PortraitPosition;
 
