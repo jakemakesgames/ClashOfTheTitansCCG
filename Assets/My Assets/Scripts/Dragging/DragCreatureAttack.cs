@@ -132,7 +132,15 @@ public class DragCreatureAttack : DraggingActions {
         if (!targetValid)
         {
             // not a valid target, return
-            whereIsThisCreature.VisualState = VisualStates.LowTable;
+            if (tag.Contains("Low"))
+            {
+                whereIsThisCreature.VisualState = VisualStates.LowTable;
+            }
+            else
+            {
+                whereIsThisCreature.VisualState = VisualStates.TopTable;
+            }
+            
             whereIsThisCreature.SetTableSortingOrder();
         }
 

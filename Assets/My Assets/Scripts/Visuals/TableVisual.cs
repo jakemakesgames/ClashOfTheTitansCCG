@@ -44,7 +44,7 @@ public class TableVisual : MonoBehaviour
 
     // METHODS
 
-    // MONOBEHAVIOUR SCRIPTS (mouse over collider detection)
+    // MONOBEHAVIOUR METHODS (mouse over collider detection)
     void Awake()
     {
         col = GetComponent<BoxCollider>();

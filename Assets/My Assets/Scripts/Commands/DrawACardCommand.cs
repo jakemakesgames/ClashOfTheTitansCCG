@@ -10,7 +10,7 @@ public class DrawACardCommand : Command {
     private int handPos;
     private CardLogic cl;
     private bool fast;
-    private int ID;
+    //private int ID;
     private bool fromDeck;
 
     public DrawACardCommand(CardLogic cl, Player p, bool fast, bool fromDeck)
