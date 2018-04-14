@@ -38,17 +38,9 @@ public class DragSpellNoTarget: DraggingActions{
         {
             // Set old sorting order 
             whereIsCard.Slot = savedHandSlot;
-            if (tag.Contains("Low"))
-            {
-                whereIsCard.VisualState = VisualStates.LowHand;
-            }
-            else
-            {
-                whereIsCard.VisualState = VisualStates.TopHand;
-            }
-            
+            whereIsCard.VisualState = VisualStates.LowHand;
             // Move this card back to its slot position
-            HandVisual PlayerHand = playerOwner.PArea.handVisual;
+            HandVisual PlayerHand = TurnManager.Instance.whoseTurn.PArea.handVisual;
             Vector3 oldCardPos = PlayerHand.slots.Children[savedHandSlot].transform.localPosition;
             transform.DOLocalMove(oldCardPos, 1f);
         } 
