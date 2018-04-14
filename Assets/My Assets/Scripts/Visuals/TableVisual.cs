@@ -44,7 +44,7 @@ public class TableVisual : MonoBehaviour
 
     // METHODS
 
-    // MONOBEHAVIOUR SCRIPTS (mouse over collider detection)
+    // MONOBEHAVIOUR METHODS (mouse over collider detection)
     void Awake()
     {
         col = GetComponent<BoxCollider>();
@@ -93,7 +93,15 @@ public class TableVisual : MonoBehaviour
         // let this creature know about its position
         WhereIsTheCardOrCreature w = creature.GetComponent<WhereIsTheCardOrCreature>();
         w.Slot = index;
-        w.VisualState = VisualStates.LowTable;
+        if (owner == AreaPosition.Low)
+        {
+            w.VisualState = VisualStates.LowTable;
+        }
+        else
+        {
+            w.VisualState = VisualStates.TopTable;
+        }
+        
 
         // add our unique ID to this creature
         IDHolder id = creature.AddComponent<IDHolder>();
