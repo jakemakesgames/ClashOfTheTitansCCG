@@ -32,6 +32,7 @@ public class TableVisual : MonoBehaviour
         get
         {
             TableVisual[] bothTables = GameObject.FindObjectsOfType<TableVisual>();
+            Debug.Log("Found " + bothTables.Length + " TableVisual scripts in the scene");
             return (bothTables[0].CursorOverThisTable || bothTables[1].CursorOverThisTable);
         }
     }
