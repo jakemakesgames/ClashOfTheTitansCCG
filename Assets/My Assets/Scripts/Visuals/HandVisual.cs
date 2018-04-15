@@ -144,7 +144,8 @@ public class HandVisual : MonoBehaviour
         // Bring card to front while it travels from draw spot to hand
         WhereIsTheCardOrCreature w = card.GetComponent<WhereIsTheCardOrCreature>();
         w.BringToFront();
-        w.Slot = 0; 
+        w.Slot = 0;
+        w.VisualState = VisualStates.Transition;
 
         // pass a unique ID to this card.
         IDHolder id = card.AddComponent<IDHolder>();
