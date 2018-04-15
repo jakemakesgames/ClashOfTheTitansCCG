@@ -85,6 +85,14 @@ public class Player : MonoBehaviour, ICharacter
         PlayerID = IDFactory.GetUniqueID();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            DrawACard();
+        }
+    }
+
     public virtual void OnTurnStart()
     {
         // add one mana crystal to the pool;
