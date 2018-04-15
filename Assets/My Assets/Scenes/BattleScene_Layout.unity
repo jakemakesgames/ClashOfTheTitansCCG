@@ -1398,6 +1398,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4135196914841182, guid: ee44ae3bfe5e12e41b5f05ec6e480698, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674562877948210, guid: ee44ae3bfe5e12e41b5f05ec6e480698, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -12.23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee44ae3bfe5e12e41b5f05ec6e480698, type: 2}
   m_IsPrefabParent: 0
@@ -1665,7 +1673,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 20.978935, y: 2.7810466, z: 0.1}
-  m_Center: {x: -1.1536231, y: -0.24286973, z: 0}
+  m_Center: {x: -1.1536231, y: -0.24286973, z: 1}
 --- !u!4 &1369875207 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4041580819783200, guid: 239c9f7498a5c9f45a219ccabb54d6df,
