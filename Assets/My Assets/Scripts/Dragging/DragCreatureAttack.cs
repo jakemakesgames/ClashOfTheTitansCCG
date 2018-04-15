@@ -66,7 +66,7 @@ public class DragCreatureAttack : DraggingActions {
             triangleSR.enabled = true;
             triangleSR.transform.position = transform.position - 1.5f*direction;
 
-            // proper rotarion of arrow end
+            // proper rotation of arrow end
             float rot_z = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;
             triangleSR.transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
         }
@@ -132,7 +132,15 @@ public class DragCreatureAttack : DraggingActions {
         if (!targetValid)
         {
             // not a valid target, return
-            whereIsThisCreature.VisualState = VisualStates.LowTable;
+            if (tag.Contains("Low"))
+            {
+                whereIsThisCreature.VisualState = VisualStates.LowTable;
+            }
+            else
+            {
+                whereIsThisCreature.VisualState = VisualStates.TopTable;
+            }
+
             whereIsThisCreature.SetTableSortingOrder();
         }
 

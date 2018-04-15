@@ -120,6 +120,17 @@ public class Player : MonoBehaviour, ICharacter
         {
             if (hand.CardsInHand.Count < PArea.handVisual.slots.Children.Length)
             {
+                // 1) logic: add a card to hand
+                CardLogic newCard = new CardLogic(deck.cards[0]);
+                newCard.owner = this;
+                hand.CardsInHand.Insert(0, newCard);
+
+                // 2) logic: remove a card from the deck
+                deck.cards.RemoveAt(0);
+                // create a new command
+                new DrawACardCommand(hand.CardsInHand[0], this, fast, fromDeck: true).AddToQueue();
+
+                /*
                 // 1) save index to place a visual card into visual hand
                 int indexToPlaceACard = hand.CardsInHand.Count;
                 // 2) logic: add card to hand
@@ -132,6 +143,7 @@ public class Player : MonoBehaviour, ICharacter
                 // 4) create a command
                 //new DrawACardCommand(hand.CardsInHand[indexToPlaceACard], this, indexToPlaceACard, fast, fromDeck: true).AddToQueue(); 
                 new DrawACardCommand(hand.CardsInHand[indexToPlaceACard], this, fast: true, fromDeck: false).AddToQueue();
+                */
             }
         }
         else
