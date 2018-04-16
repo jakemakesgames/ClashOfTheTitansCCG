@@ -14,11 +14,11 @@ MonoBehaviour:
   Class: 2
   ClassName: Zeus
   MaxHealth: 30
-  HeroPowerName: Lightning Bolt
+  HeroPowerName: HeroPower
   AvatarImage: {fileID: 21300000, guid: 20509598890c9cb40aa1d4539a3f763a, type: 3}
   HeroPowerIconImage: {fileID: 21300000, guid: 6855d230512a7c047b3963277d969140, type: 3}
-  AvatarBGImage: {fileID: 0}
-  HeroPowerBGImage: {fileID: 0}
+  AvatarBGImage: {fileID: 21300000, guid: 20509598890c9cb40aa1d4539a3f763a, type: 3}
+  HeroPowerBGImage: {fileID: 21300000, guid: 6855d230512a7c047b3963277d969140, type: 3}
   AvatarBGTint:
     serializedVersion: 2
     rgba: 4282646530

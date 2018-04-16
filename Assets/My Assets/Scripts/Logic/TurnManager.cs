@@ -50,12 +50,12 @@ public class TurnManager : MonoBehaviour {
 
     void Start()
     {
-        // FIX LATER OnGameStart();
+        OnGameStart();
     }
 
     public void OnGameStart()
     {
-        //Debug.Log("In TurnManager.OnGameStart()");
+        Debug.Log("In TurnManager.OnGameStart()");
 
         CardLogic.CardsCreatedThisGame.Clear();
         CreatureLogic.CreaturesCreatedThisGame.Clear();

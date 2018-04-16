@@ -43,7 +43,7 @@ public class PlayerPortraitVisual : MonoBehaviour {
     {
         if (amount > 0)
         {
-            // FIX LATER - DamageEffect.CreateDamageEffect(transform.position, amount);
+            DamageEffect.CreateDamageEffect(transform.position, amount);
             HealthText.text = healthAfter.ToString();
         }
     }

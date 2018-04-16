@@ -31,7 +31,7 @@ public class MessageManager : MonoBehaviour
         // FADE THE PANEL OUT //
 
         MessagePanel.SetActive(false);
-        // FIX THIS LATER - Command.CommandExecutionComplete();
+        Command.CommandExecutionComplete();
     }
 
     // DEBUGGING ONLY - DELETE THE UPDATE FUNCTION LATER //
