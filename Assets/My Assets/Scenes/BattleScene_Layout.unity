@@ -775,7 +775,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4292077685694712, guid: 020aacdc19d8b0b498d8a76965cb9f63, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114893732894949032, guid: 020aacdc19d8b0b498d8a76965cb9f63,
         type: 2}
@@ -1278,7 +1278,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4884930327529334, guid: 3befc950fbc42cb48815b844408e92ce, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114551795997211504, guid: 3befc950fbc42cb48815b844408e92ce,
         type: 2}
@@ -1552,6 +1552,7 @@ Transform:
   - {fileID: 394376365}
   - {fileID: 636623868}
   - {fileID: 1275686063}
+  - {fileID: 1004494113}
   m_Father: {fileID: 2006452963}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1575,6 +1576,7 @@ MonoBehaviour:
   HeroPower: {fileID: 1816611943}
   tableVisual: {fileID: 1322956845}
   PortraitPosition: {fileID: 1844494338}
+  InitialPortraitPosition: {fileID: 1004494113}
 --- !u!1 &831928621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1830,6 +1832,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CreaturesOnTable: []
+--- !u!1 &1004494112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1004494113}
+  m_Layer: 0
+  m_Name: InitialPortraitPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1004494113
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1004494112}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.04, y: -4.03, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 788453793}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1020048458
 Prefab:
   m_ObjectHideFlags: 0
@@ -1965,6 +1995,34 @@ GameObject:
   m_PrefabParentObject: {fileID: 1198289905979732, guid: 53692f14856c2cb45adb6e79e8237f98,
     type: 2}
   m_PrefabInternal: {fileID: 1020048458}
+--- !u!1 &1023917632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1023917633}
+  m_Layer: 0
+  m_Name: InitialPortraitPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1023917633
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1023917632}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.04, y: 4.21, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1604121271}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1033394517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,7 +2666,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4485292319102932, guid: 8bbe41727ca60e34aa9aef8f0b075169, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114761461754651906, guid: 8bbe41727ca60e34aa9aef8f0b075169,
         type: 2}
@@ -2971,6 +3029,7 @@ Transform:
   - {fileID: 70496247}
   - {fileID: 2093239474}
   - {fileID: 850846815}
+  - {fileID: 1023917633}
   - {fileID: 1275962853}
   - {fileID: 1921747403}
   - {fileID: 442182864}
@@ -2998,6 +3057,7 @@ MonoBehaviour:
   HeroPower: {fileID: 712057300}
   tableVisual: {fileID: 56055402}
   PortraitPosition: {fileID: 850846815}
+  InitialPortraitPosition: {fileID: 1023917633}
 --- !u!114 &1622235539 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114551795997211504, guid: 3befc950fbc42cb48815b844408e92ce,
@@ -3416,7 +3476,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4745088126942810, guid: ee44ae3bfe5e12e41b5f05ec6e480698, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4135196914841182, guid: ee44ae3bfe5e12e41b5f05ec6e480698, type: 2}
       propertyPath: m_LocalPosition.x

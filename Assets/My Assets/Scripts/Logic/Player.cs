@@ -278,7 +278,7 @@ public class Player : MonoBehaviour, ICharacter
         PArea.Portrait.charAsset = charAsset;
         PArea.Portrait.ApplyLookFromAsset();
         // TODO: insert the code to attach hero power script here. 
-        if (charAsset.HeroPowerName != null && charAsset.HeroPowerName != "")
+        if (charAsset.HeroPowerName != null && charAsset.HeroPowerName != "Fire Ball")
         {
             HeroPowerEffect = System.Activator.CreateInstance(System.Type.GetType(charAsset.HeroPowerName)) as SpellEffect;
         }
@@ -290,7 +290,8 @@ public class Player : MonoBehaviour, ICharacter
 
     public void TransmitInfoAboutPlayerToVisual()
     {
-        PArea.Portrait.GetComponent<IDHolder>().UniqueID = PlayerID;
+        //PArea.Portrait.GetComponent<IDHolder>().UniqueID = PlayerID;
+        PArea.Portrait.gameObject.AddComponent<IDHolder>().UniqueID = PlayerID;
         if (GetComponent<TurnMaker>() is AITurnMaker)
         {
             // turn off turn making for this character
