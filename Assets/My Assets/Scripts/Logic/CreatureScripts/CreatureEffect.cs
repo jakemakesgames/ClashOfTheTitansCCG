@@ -18,4 +18,10 @@ public abstract class CreatureEffect
 
     public abstract void CauseEffect();
 
+    // BATTLECRY
+    public virtual void WhenACreatureIsPlayed(){}
+
+    // DEATHRATTLE
+    public virtual void WhenACreatureDies(){}
+
 }

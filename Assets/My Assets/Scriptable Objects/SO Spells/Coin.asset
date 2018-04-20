@@ -24,4 +24,4 @@ MonoBehaviour:
   specialCreatureAmount: 0
   SpellScriptName: GiveManaBonus
   specialSpellAmount: 1
-  Targets: 6
+  Targets: 0
