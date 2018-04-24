@@ -9,19 +9,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce515557b64d0d048baa701c20ac6211, type: 3}
-  m_Name: Creature3
+  m_Name: Something Storm
   m_EditorClassIdentifier: 
-  characterAsset: {fileID: 0}
-  Description: 
+  characterAsset: {fileID: 11400000, guid: 21fe6e5b22fd55a45bd1a6595e9989e2, type: 2}
+  Description: Deal 3 damage to all creatures.
   CardImage: {fileID: 0}
-  ManaCost: 0
-  MaxHealth: 1
-  Attack: 1
+  ManaCost: 7
+  rarity: Rare
+  MaxHealth: 0
+  Attack: 0
   AttacksForOneTurn: 1
   Taunt: 0
   Charge: 0
   CreatureScriptName: 
   specialCreatureAmount: 0
   SpellScriptName: 
-  specialSpellAmount: 0
-  Targets: 0
+  specialSpellAmount: 3
+  Targets: 2

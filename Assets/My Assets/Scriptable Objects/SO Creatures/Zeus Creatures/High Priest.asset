@@ -9,19 +9,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce515557b64d0d048baa701c20ac6211, type: 3}
-  m_Name: Fire Ball
+  m_Name: High Priest
   m_EditorClassIdentifier: 
-  characterAsset: {fileID: 0}
-  Description: Deal 7 damage to a target charcter
-  CardImage: {fileID: 21300000, guid: 20509598890c9cb40aa1d4539a3f763a, type: 3}
-  ManaCost: 5
-  MaxHealth: 0
-  Attack: 0
+  characterAsset: {fileID: 11400000, guid: 21fe6e5b22fd55a45bd1a6595e9989e2, type: 2}
+  Description: 'Battlecry: Deal 3 damage to an enemy creature.'
+  CardImage: {fileID: 0}
+  ManaCost: 6
+  rarity: Common
+  MaxHealth: 6
+  Attack: 5
   AttacksForOneTurn: 1
   Taunt: 0
   Charge: 0
   CreatureScriptName: 
-  specialCreatureAmount: 0
+  specialCreatureAmount: 3
   SpellScriptName: 
-  specialSpellAmount: 7
-  Targets: 4
+  specialSpellAmount: 0
+  Targets: 2

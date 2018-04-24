@@ -9,12 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce515557b64d0d048baa701c20ac6211, type: 3}
-  m_Name: Creature4
+  m_Name: Creature3
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Description: 
   CardImage: {fileID: 0}
   ManaCost: 0
+  rarity: 
   MaxHealth: 1
   Attack: 1
   AttacksForOneTurn: 1

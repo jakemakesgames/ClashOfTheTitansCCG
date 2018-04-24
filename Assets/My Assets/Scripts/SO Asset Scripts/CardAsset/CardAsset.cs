@@ -22,6 +22,7 @@ public class CardAsset : ScriptableObject
     public string Description;  // Description for spell or character
 	public Sprite CardImage;
     public int ManaCost;
+    public string rarity;
 
     [Header("Creature Info")]
     public int MaxHealth; // if MaxHealth == 0 it is a Spell Card 

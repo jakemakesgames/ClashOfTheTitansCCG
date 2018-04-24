@@ -9,19 +9,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce515557b64d0d048baa701c20ac6211, type: 3}
-  m_Name: Coin
+  m_Name: Hasty Harry
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
-  Description: 
-  CardImage: {fileID: 21300000, guid: 20509598890c9cb40aa1d4539a3f763a, type: 3}
-  ManaCost: 0
-  MaxHealth: 0
-  Attack: 0
+  Description: Charge. Whenever this creature is damaged, restore 1 health to your
+    hero.
+  CardImage: {fileID: 0}
+  ManaCost: 3
+  rarity: 
+  MaxHealth: 4
+  Attack: 1
   AttacksForOneTurn: 1
   Taunt: 0
-  Charge: 0
+  Charge: 1
   CreatureScriptName: 
   specialCreatureAmount: 0
-  SpellScriptName: GiveManaBonus
+  SpellScriptName: 
   specialSpellAmount: 1
   Targets: 0
