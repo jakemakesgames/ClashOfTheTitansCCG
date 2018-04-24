@@ -9,20 +9,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce515557b64d0d048baa701c20ac6211, type: 3}
-  m_Name: Herakles
+  m_Name: Living Corpse
   m_EditorClassIdentifier: 
-  characterAsset: {fileID: 11400000, guid: 21fe6e5b22fd55a45bd1a6595e9989e2, type: 2}
-  Description: 'Charge. Battlecry: Summon 2 1/1 snakes for your opponent.'
+  characterAsset: {fileID: 11400000, guid: b4cfe23788bb7cd4aa5f3c1336f1eead, type: 2}
+  Description: Whenever this creature attacks, restore 1 health to your hero.
   CardImage: {fileID: 0}
-  ManaCost: 5
-  rarity: Legendary
+  ManaCost: 2
+  rarity: Rare
   MaxHealth: 2
-  Attack: 6
+  Attack: 2
   AttacksForOneTurn: 1
   Taunt: 0
-  Charge: 1
+  Charge: 0
   CreatureScriptName: 
-  specialCreatureAmount: 0
+  specialCreatureAmount: 1
   SpellScriptName: 
-  specialSpellAmount: 6
+  specialSpellAmount: 0
   Targets: 0

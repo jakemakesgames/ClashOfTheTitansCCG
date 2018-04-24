@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Achilles
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 11400000, guid: 21fe6e5b22fd55a45bd1a6595e9989e2, type: 2}
-  Description: Gain Divine Sjield at the start of each turn.
+  Description: Gain Divine Shield at the start of each turn.
   CardImage: {fileID: 0}
   ManaCost: 8
   rarity: Legendary

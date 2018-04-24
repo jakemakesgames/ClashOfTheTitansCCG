@@ -9,20 +9,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce515557b64d0d048baa701c20ac6211, type: 3}
-  m_Name: Herakles
+  m_Name: Harvest Life
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 11400000, guid: 21fe6e5b22fd55a45bd1a6595e9989e2, type: 2}
-  Description: 'Charge. Battlecry: Summon 2 1/1 snakes for your opponent.'
+  Description: Deal 4 damage to all creatures. Restore half that much health
   CardImage: {fileID: 0}
-  ManaCost: 5
+  ManaCost: 9
   rarity: Legendary
-  MaxHealth: 2
-  Attack: 6
+  MaxHealth: 0
+  Attack: 0
   AttacksForOneTurn: 1
   Taunt: 0
-  Charge: 1
+  Charge: 0
   CreatureScriptName: 
   specialCreatureAmount: 0
   SpellScriptName: 
-  specialSpellAmount: 6
-  Targets: 0
+  specialSpellAmount: 4
+  Targets: 1
