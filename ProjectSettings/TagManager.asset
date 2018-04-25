@@ -10,6 +10,7 @@ TagManager:
   - TopCard
   - LowPlayer
   - TopPlayer
+  - Server
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/My Assets/Scenes/BattleScene_Layout.unity
     guid: ddc807b5ed730e145b969badd2195b1f
+  - enabled: 1
+    path: Assets/My Assets/Scenes/Test Scenes/Jeremy Little/menu Test Scene.unity
+    guid: 4722892c959cb354aba89be574eb08f9
