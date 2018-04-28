@@ -6,6 +6,7 @@ using System.Text;
 using System.Net;
 using System.Net.Sockets;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ServerClient
 {
@@ -26,24 +27,39 @@ public class ServerClient
 public class Client : MonoBehaviour
 {
 
-    private GameObject findGameCanvas;
+    private static Client instance;
 
+    private GameObject findGameCanvas;
     private int connectionID;
     private int hostID;
-    private int webHost;
+    //private int webHost;
     private int reliableChannel;
     private int unreliablechannel;
     private string ip;
 
     private int port = 5701;
 
-    private float connectionTime;
+    //private float connectionTime;
     private bool isConnected = false;
+
+    private bool isReady = false;
+
     //private bool isStarted = false;
 
     private byte error;
 
     private string playerName;
+
+    public string PlayerName
+    {
+        get
+        {
+            return playerName;
+        }
+    }
+
+    private float gameStartCountDown;
+
 
     private int ourClientID;
 
@@ -51,10 +67,30 @@ public class Client : MonoBehaviour
 
     ServerClient other;
 
+    private UIManager uim;
+
+    private Text countDownText;
+
+
+
     private void Awake()
     {
+        if (!instance)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+
+        DontDestroyOnLoad(this.gameObject);
+
         NetworkTransport.Init();
         findGameCanvas = GameObject.Find("FindGame");
+        uim = FindObjectOfType<UIManager>();
+        countDownText = GameObject.Find("CountDownText").GetComponent<Text>();
+        gameStartCountDown = 4;
     }
 
     public bool JoinServer()
@@ -110,7 +146,7 @@ public class Client : MonoBehaviour
         if (error != (byte)NetworkError.Ok)
         {
             Debug.LogError("Network error is occurred: " + (NetworkError)error);
-
+            SceneManager.LoadScene(0);
             return false;
         }
 
@@ -123,7 +159,6 @@ public class Client : MonoBehaviour
         return true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isConnected == true)
@@ -145,8 +180,9 @@ public class Client : MonoBehaviour
             if (error != (byte)NetworkError.Ok)
             {
                 Debug.LogError("Network error is occurred: " + (NetworkError)error);
-                GameObject go = Instantiate(new GameObject(), new Vector3(500f, 500f, 0f), Quaternion.identity);
-                go.AddComponent<TextMesh>().text = "NETWORK ERROR" + (NetworkError)error;
+                SceneManager.LoadScene(0);
+                // GameObject go = Instantiate(new GameObject(), new Vector3(500f, 500f, 0f), Quaternion.identity);
+                //  go.AddComponent<TextMesh>().text = "NETWORK ERROR" + (NetworkError)error;
 
             }
 
@@ -167,6 +203,36 @@ public class Client : MonoBehaviour
             if (error != (byte)NetworkError.Ok)
             {
                 Debug.LogError("Network error is occurred: " + (NetworkError)error);
+                SceneManager.LoadScene(0);
+            }
+
+
+            if (me != null && other != null)
+            {
+                if (me.ready && other.ready)
+                {
+                    gameStartCountDown -= Time.deltaTime;
+                    if (gameStartCountDown > 0)
+                    {
+                        if (countDownText.enabled != true)
+                        {
+                            countDownText.enabled = true;
+                        }
+                        countDownText.text = Mathf.Floor(gameStartCountDown).ToString();
+                    }
+                    else
+                    {
+                        //load the new scene
+                    }
+                }
+                else
+                {
+                    if (gameStartCountDown != 4)
+                    {
+                        countDownText.enabled = false;
+                        gameStartCountDown = 4;
+                    }
+                }
             }
         }
     }
@@ -179,11 +245,17 @@ public class Client : MonoBehaviour
 
         switch (splitData[0])
         {
-            case "cmdASKNAME":
+            case "rpcASKNAME":
                 cmdAskName(splitData);
                 break;
-            case "cmdCNN":
+            case "rpcCNN":
                 SpawnServerPlayer(splitData[1], int.Parse(splitData[2]));
+                break;
+            case "rpcRECIVELOBBYMSG":
+                uim.AddTextToLobbyChatBox(splitData[2]);
+                break;
+            case "rpcREADY":
+                rpcReady();
                 break;
             case "cmdDC":
                 //  PlayerDisconnected(int.Parse(splitData[1]));
@@ -199,12 +271,65 @@ public class Client : MonoBehaviour
                 break;
 
         }
+
+
+
+     
+    }
+
+    public void cmdImReady()
+    {
+        if (me != null)
+        {
+            me.ready = !me.ready;
+            if (other != null)
+            {
+                if (me.ready == true)
+                {
+                    GameObject.Find("MyUsername").GetComponent<Text>().color = Color.green;
+                }
+                else
+                {
+                    GameObject.Find("MyUsername").GetComponent<Text>().color = Color.red;
+                }
+            }
+            else
+            {
+                return;
+            }
+
+
+            Send("cmdREADY|" + ourClientID.ToString(), reliableChannel);
+        }
+    }
+
+    private void rpcReady()
+    {
+        if (other != null)
+        {
+            other.ready = !other.ready;
+            if (other.ready == true)
+            {
+                GameObject.Find("OtherUsername").GetComponent<Text>().color = Color.green;
+            }
+            else
+            {
+                GameObject.Find("OtherUsername").GetComponent<Text>().color = Color.red;
+            }
+        }
+    }
+
+    public void cmdSendLobbyChat(string a_msg)
+    {
+        string msg = "cmdSENDLOBBYMSG|" + ourClientID.ToString() + "|" + a_msg;
+
+        Send(msg, reliableChannel);
     }
 
     private void cmdAskName(string[] cmd)
     {
         //this for the lobby
-
+        GameObject.Find("MyUsername").GetComponent<Text>().text = playerName;
         // set the clients ID
         ourClientID = int.Parse(cmd[1]);
 
@@ -226,14 +351,10 @@ public class Client : MonoBehaviour
         if (cnnID != ourClientID)
         {
             other = new ServerClient(cnnID, a_playerName);
+            GameObject.Find("OtherUsername").GetComponent<Text>().text = other.name;
         }
 
         Debug.Log(other.name + me.name);
-
-        if (other != null && me != null)
-        {
-            GameObject.Find("vsText").GetComponent<Text>().text = me.name + " VS " + other.name;
-        }
 
     }
 
@@ -242,6 +363,11 @@ public class Client : MonoBehaviour
         Debug.Log("[CLIENT" + connectionID.ToString() + "] Sending This To Server: " + message);
         byte[] msg = Encoding.Unicode.GetBytes(message);
         NetworkTransport.Send(hostID, connectionID, channelID, msg, message.Length * sizeof(char), out error);
+        if (error != (byte)NetworkError.Ok)
+        {
+            Debug.LogError("Network error is occurred: " + (NetworkError)error);
+            SceneManager.LoadScene(0);
+        }
     }
 
 }

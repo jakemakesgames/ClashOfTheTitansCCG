@@ -11,15 +11,55 @@ public class UIManager : MonoBehaviour
     private GameObject hostGameCanvas;
     private GameObject lobbyCanvas;
 
+    private Client client;
+
+
     [SerializeField]
     private GameObject serverPrefab;
 
     [SerializeField]
     private GameObject clientPrefab;
 
-    // Use this for initialization
-    void Start()
+    [SerializeField]
+    private GameObject textPrefab;
+
+    private InputField chatInput;
+
+    private GameObject chatBox;
+
+    void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            if (chatInput.text.Length > 0)
+            {
+
+                client.cmdSendLobbyChat(client.PlayerName + ": " + chatInput.text);
+                AddTextToLobbyChatBox(client.PlayerName + ": " + chatInput.text);
+                chatInput.text = "";
+            }
+        }
+
+    }
+
+    public void ReadyButton()
+    {
+        client.cmdImReady();
+    }
+
+    public void AddTextToLobbyChatBox(string a_msg)
+    {
+        GameObject tempText = Instantiate(textPrefab, chatBox.transform);
+        tempText.GetComponent<Text>().text = a_msg;
+
+    }
+
+
+    // Use this for initialization
+    void Awake()
+    {
+        chatBox = GameObject.Find("ScrollContent");
+        chatInput = GameObject.Find("ChatInput").GetComponent<InputField>();
         findGameCanvas = GameObject.Find("FindGame");
         menuCanvas = GameObject.Find("Menu");
         hostGameCanvas = GameObject.Find("HostGame");
@@ -50,8 +90,10 @@ public class UIManager : MonoBehaviour
 
     public void StartJoin()
     {
-        GameObject client = Instantiate(clientPrefab);
-        if (client.GetComponent<Client>().JoinServer())
+        GameObject clientGO = Instantiate(clientPrefab);
+        client = clientGO.GetComponent<Client>();
+
+        if (client.JoinServer())
         {
             lobbyCanvas.GetComponent<Canvas>().enabled = true;
             findGameCanvas.GetComponent<Canvas>().enabled = false;

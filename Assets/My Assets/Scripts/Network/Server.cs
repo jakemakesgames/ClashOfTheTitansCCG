@@ -92,7 +92,7 @@ public class Server : MonoBehaviour
 
 
         NetworkEventType recData = NetworkTransport.Receive(out recHostId, out connectionId, out channelId, recBuffer, bufferSize, out dataSize, out error);
-       // conncetionIdArr.Add(connectionId);
+        // conncetionIdArr.Add(connectionId);
         switch (recData)
         {
             case NetworkEventType.ConnectEvent:
@@ -112,35 +112,12 @@ public class Server : MonoBehaviour
 
     }
 
-    private void cmdController(string cmd, int cnnID)
-    {
-        string[] splitData;
-        splitData = cmd.Split('|');
-
-        switch (splitData[0])
-        {
-
-            case "cmdNAMEIS":
-                cmdNAMEIS(cnnID, splitData[1]);
-                break;
-            case "cmdCLIENTPOS":
-               // cmdMyPos((int)splitData[0], float.Parse((string)splitData[1]), float.Parse((string)splitData[2]), float.Parse((string)splitData[3]), float.Parse((string)splitData[4]), float.Parse((string)splitData[5]), float.Parse((string)splitData[6]), float.Parse((string)splitData[7]));
-                break;
-            case "cmdREADY":
-               // cmdReady(cnnID);
-                break;
-
-        }
-
-    }
-
-
     private void OnClientConnected(int id)
     {
 
-        clients.Add(new ServerClient(id, "temp"));
+        clients.Add(new ServerClient(id, "Loading..."));
 
-        string msg = "cmdASKNAME|" + id + "|";
+        string msg = "rpcASKNAME|" + id + "|";
 
         foreach (ServerClient sc in clients)
         {
@@ -153,7 +130,6 @@ public class Server : MonoBehaviour
 
     }
 
-
     private void OnClientDisconnected(int cnnID)
     {
         //string msg = "cmdDC|" + cnnID;
@@ -162,12 +138,57 @@ public class Server : MonoBehaviour
     }
 
 
-    public void cmdNAMEIS(int cnnID, string playerName)
+    private void cmdController(string cmd, int cnnID)
+    {
+        string[] splitData;
+        splitData = cmd.Split('|');
+
+        switch (splitData[0])
+        {
+
+            case "cmdNAMEIS":
+                rpcNameIs(cnnID, splitData[1]);
+                break;
+            case "cmdSENDLOBBYMSG":
+                rpcSendMsgToOtherClient(int.Parse(splitData[1]), splitData[2]);
+                break;
+            case "cmdREADY":
+                 rpcReady(int.Parse(splitData[1]));
+                break;
+
+        }
+
+    }
+
+
+    private void rpcSendMsgToOtherClient(int cnnID, string msg)
+    {
+        foreach(ServerClient c in clients)
+        {
+            if(c.connectionID != cnnID)
+            {
+                Send("rpcRECIVELOBBYMSG|" + cnnID.ToString() + "|" + msg, reliableChannel, c.connectionID);
+            }
+        }
+    }
+
+    private void rpcReady(int cnnID)
+    {
+        foreach (ServerClient c in clients)
+        {
+            if (c.connectionID != cnnID)
+            {
+                Send("rpcREADY|" + cnnID.ToString(), reliableChannel, c.connectionID);
+            }
+        }
+    }
+
+    public void rpcNameIs(int cnnID, string playerName)
     {
 
         clients.Find(x => x.connectionID == cnnID).name = playerName;
 
-        Send("cmdCNN|" + playerName + '|' + cnnID, reliableChannel, clients);
+        Send("rpcCNN|" + playerName + '|' + cnnID, reliableChannel, clients);
 
     }
 
