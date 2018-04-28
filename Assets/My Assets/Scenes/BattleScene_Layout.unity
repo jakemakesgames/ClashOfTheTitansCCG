@@ -1393,7 +1393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 566554b8ab199334187136f28e619c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: 1
+  owner: 0
   HeightOfOneCard: 0.012
 --- !u!1 &498956001 stripped
 GameObject:
@@ -1565,32 +1565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41591da53151da4e88576f27483d4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cards:
-  - {fileID: 11400000, guid: 2f8d552c7b697234ebf118d5ef774218, type: 2}
-  - {fileID: 11400000, guid: 49f7180bbaf4c314783eb599d04ea2ec, type: 2}
-  - {fileID: 11400000, guid: c70c881a159d2c8438e36fea73192d61, type: 2}
-  - {fileID: 11400000, guid: b7ebb1bceed79f14d9d627e5ada32125, type: 2}
-  - {fileID: 11400000, guid: 518b23a203fd7f3488c47aaf4b006ce7, type: 2}
-  - {fileID: 11400000, guid: 86313b67e2c1d9f439e61c202ee47f15, type: 2}
-  - {fileID: 11400000, guid: 16ab0bb5c956f82469b53a3c5d743ff9, type: 2}
-  - {fileID: 11400000, guid: 0df2b4cbbaf4e2046b532b139fd19b88, type: 2}
-  - {fileID: 11400000, guid: dd0f45be0a824b24aaaea3d4392330e3, type: 2}
-  - {fileID: 11400000, guid: 69138c84e58ec634e995f8c771083d9f, type: 2}
-  - {fileID: 11400000, guid: 30a94cdf28a12d549a5b464fb1bb0198, type: 2}
-  - {fileID: 11400000, guid: 72f94076a5ca0ad49b24f1dff6c14641, type: 2}
-  - {fileID: 11400000, guid: 6ddf111d547c0744b8fc409d24ebae4e, type: 2}
-  - {fileID: 11400000, guid: b76b7996b912a5f49a0ee859ea2a38e1, type: 2}
-  - {fileID: 11400000, guid: 2f8d552c7b697234ebf118d5ef774218, type: 2}
-  - {fileID: 11400000, guid: 49f7180bbaf4c314783eb599d04ea2ec, type: 2}
-  - {fileID: 11400000, guid: c70c881a159d2c8438e36fea73192d61, type: 2}
-  - {fileID: 11400000, guid: 518b23a203fd7f3488c47aaf4b006ce7, type: 2}
-  - {fileID: 11400000, guid: 86313b67e2c1d9f439e61c202ee47f15, type: 2}
-  - {fileID: 11400000, guid: 16ab0bb5c956f82469b53a3c5d743ff9, type: 2}
-  - {fileID: 11400000, guid: 0df2b4cbbaf4e2046b532b139fd19b88, type: 2}
-  - {fileID: 11400000, guid: 69138c84e58ec634e995f8c771083d9f, type: 2}
-  - {fileID: 11400000, guid: 30a94cdf28a12d549a5b464fb1bb0198, type: 2}
-  - {fileID: 11400000, guid: 72f94076a5ca0ad49b24f1dff6c14641, type: 2}
-  - {fileID: 11400000, guid: b76b7996b912a5f49a0ee859ea2a38e1, type: 2}
+  cards: []
 --- !u!4 &636623868 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4884930327529334, guid: 3befc950fbc42cb48815b844408e92ce,
@@ -1691,8 +1666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e893d2fa58553014daa3a85378896910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamagePrefab: {fileID: 1871432100486918, guid: c82025044e178934480be1e44e785cf0,
-    type: 2}
+  DamagePrefab: {fileID: 681624959}
 --- !u!4 &681624961
 Transform:
   m_ObjectHideFlags: 0
@@ -1849,7 +1823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2545b01138db3d4a8658753a3936707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: 1
+  owner: 0
   ControlsON: 1
   PDeck: {fileID: 485121017}
   ManaBar: {fileID: 1592132081}
@@ -2136,32 +2110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41591da53151da4e88576f27483d4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cards:
-  - {fileID: 11400000, guid: 2f8d552c7b697234ebf118d5ef774218, type: 2}
-  - {fileID: 11400000, guid: 49f7180bbaf4c314783eb599d04ea2ec, type: 2}
-  - {fileID: 11400000, guid: c70c881a159d2c8438e36fea73192d61, type: 2}
-  - {fileID: 11400000, guid: caf644ab06a9c1645a33052e6ed04dbd, type: 2}
-  - {fileID: 11400000, guid: ddf7b1f135e326e45954cea57ad60004, type: 2}
-  - {fileID: 11400000, guid: 2e9286c47f769a6428bedb7d7c3f3811, type: 2}
-  - {fileID: 11400000, guid: a40a13c51c326244fba78d26dcb4a9e5, type: 2}
-  - {fileID: 11400000, guid: 68a4ee040b2898a4faf0bd2a35d2814b, type: 2}
-  - {fileID: 11400000, guid: d36269a5db9057b48a30434fb58dc7c5, type: 2}
-  - {fileID: 11400000, guid: 61c56b532618bc1459725444acc82b08, type: 2}
-  - {fileID: 11400000, guid: 017c2225c539d0e43be56031b7c15d1f, type: 2}
-  - {fileID: 11400000, guid: 10179f1d9e81fd044aeb1be0462650ff, type: 2}
-  - {fileID: 11400000, guid: 38043b184b0d14b45bfcff81b9309d84, type: 2}
-  - {fileID: 11400000, guid: 1c1f557e7c34b9642bb8a286974a66fb, type: 2}
-  - {fileID: 11400000, guid: 2f8d552c7b697234ebf118d5ef774218, type: 2}
-  - {fileID: 11400000, guid: 49f7180bbaf4c314783eb599d04ea2ec, type: 2}
-  - {fileID: 11400000, guid: c70c881a159d2c8438e36fea73192d61, type: 2}
-  - {fileID: 11400000, guid: ddf7b1f135e326e45954cea57ad60004, type: 2}
-  - {fileID: 11400000, guid: a40a13c51c326244fba78d26dcb4a9e5, type: 2}
-  - {fileID: 11400000, guid: 68a4ee040b2898a4faf0bd2a35d2814b, type: 2}
-  - {fileID: 11400000, guid: d36269a5db9057b48a30434fb58dc7c5, type: 2}
-  - {fileID: 11400000, guid: d36269a5db9057b48a30434fb58dc7c5, type: 2}
-  - {fileID: 11400000, guid: 10179f1d9e81fd044aeb1be0462650ff, type: 2}
-  - {fileID: 11400000, guid: 38043b184b0d14b45bfcff81b9309d84, type: 2}
-  - {fileID: 11400000, guid: 1c1f557e7c34b9642bb8a286974a66fb, type: 2}
+  cards: []
 --- !u!1 &991906191
 GameObject:
   m_ObjectHideFlags: 0
@@ -2241,6 +2190,11 @@ Prefab:
     - target: {fileID: 114901676158530134, guid: 53692f14856c2cb45adb6e79e8237f98,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114166635101547024, guid: 53692f14856c2cb45adb6e79e8237f98,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4983509904066270, guid: 53692f14856c2cb45adb6e79e8237f98, type: 2}
@@ -2333,6 +2287,31 @@ Prefab:
     - target: {fileID: 114901676158530134, guid: 53692f14856c2cb45adb6e79e8237f98,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114166635101547024, guid: 53692f14856c2cb45adb6e79e8237f98,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114166635101547024, guid: 53692f14856c2cb45adb6e79e8237f98,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114166635101547024, guid: 53692f14856c2cb45adb6e79e8237f98,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1033394519}
+    - target: {fileID: 114166635101547024, guid: 53692f14856c2cb45adb6e79e8237f98,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndTurn
+      objectReference: {fileID: 0}
+    - target: {fileID: 114166635101547024, guid: 53692f14856c2cb45adb6e79e8237f98,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2429,18 +2408,7 @@ MonoBehaviour:
   TimerText: {fileID: 1020048461}
   TimerExpired:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1033394519}
-        m_MethodName: EndTurn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1033394519
@@ -2657,7 +2625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: 0
-  slots: {fileID: 1390224308}
+  slots: {fileID: 0}
 --- !u!1001 &1211296477
 Prefab:
   m_ObjectHideFlags: 0
@@ -3189,13 +3157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13cada85b4b75344971b97cf431d15c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Children:
-  - {fileID: 19084186}
-  - {fileID: 831928622}
-  - {fileID: 2118987226}
-  - {fileID: 1388326323}
-  - {fileID: 1594749200}
-  - {fileID: 124329907}
+  Children: []
 --- !u!1001 &1453420000
 Prefab:
   m_ObjectHideFlags: 0
@@ -4107,13 +4069,13 @@ MonoBehaviour:
   LowPlayer: {fileID: 2092382913}
   CardBodyStandardColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4278210413
   CardRibbonsStandardColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 6645093
   CardGlowColor:
     serializedVersion: 2
-    rgba: 4284153771
+    rgba: 5832542
   CardPreviewTime: 1
   CardTransitionTime: 1
   CardPreviewTimeFast: 0.2
@@ -4128,8 +4090,7 @@ MonoBehaviour:
     type: 2}
   DamageEffectPrefab: {fileID: 1871432100486918, guid: c82025044e178934480be1e44e785cf0,
     type: 2}
-  ExplosionPrefab: {fileID: 1358934000485182, guid: 834912ff0b8545148b7bb9e07bb89b63,
-    type: 2}
+  ExplosionPrefab: {fileID: 681624959}
   EndTurnButton: {fileID: 1020048460}
   CoinCard: {fileID: 11400000, guid: a27beab42f4cf9e499ffea6a1ed13079, type: 2}
   GameOverCanvas: {fileID: 1946946439}

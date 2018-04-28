@@ -85,6 +85,7 @@ public class Player : MonoBehaviour, ICharacter
         PlayerID = IDFactory.GetUniqueID();
     }
 
+	// TESTING ONLY //
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.D))
