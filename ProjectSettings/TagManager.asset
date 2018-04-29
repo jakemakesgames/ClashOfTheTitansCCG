@@ -11,6 +11,7 @@ TagManager:
   - LowPlayer
   - TopPlayer
   - Server
+  - Client
   layers:
   - Default
   - TransparentFX

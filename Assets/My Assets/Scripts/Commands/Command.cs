@@ -16,10 +16,8 @@ public class Command
 
     public virtual void StartCommandExecution()
     {
-
-
-            
-         
+        //add some networking calls
+        GameObject.FindGameObjectWithTag("Client").GetComponent<Client>().cmdSendCommand(this);
         // list of everything that we have to do with this command (draw a card, play a card, play spell effect, etc...)
         // there are 2 options of timing : 
         // 1) use tween sequences and call CommandExecutionComplete in OnComplete()

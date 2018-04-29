@@ -204,32 +204,36 @@ public class Client : MonoBehaviour
                 SceneManager.LoadScene(0);
             }
 
-
-            if (me != null && other != null)
+            if (countDownText != null)
             {
-                if (me.ready && other.ready)
+                if (me != null && other != null)
                 {
-                    gameStartCountDown -= Time.deltaTime;
-                    if (gameStartCountDown > 0)
+                    if (me.ready && other.ready)
                     {
-                        if (countDownText.enabled != true)
+                        gameStartCountDown -= Time.deltaTime;
+                        if (gameStartCountDown > 0)
                         {
-                            countDownText.enabled = true;
+
+                            if (countDownText.enabled != true)
+                            {
+                                countDownText.enabled = true;
+                            }
+                            countDownText.text = Mathf.Floor(gameStartCountDown).ToString();
                         }
-                        countDownText.text = Mathf.Floor(gameStartCountDown).ToString();
+                        else
+                        {
+                            //load the new scene
+                            SceneManager.LoadScene(1);
+                            gameStartCountDown = 4;
+                        }
                     }
                     else
                     {
-                        //load the new scene
-                        SceneManager.LoadScene(1);
-                    }
-                }
-                else
-                {
-                    if (gameStartCountDown != 4)
-                    {
-                        countDownText.enabled = false;
-                        gameStartCountDown = 4;
+                        if (gameStartCountDown != 4)
+                        {
+                            countDownText.enabled = false;
+                            gameStartCountDown = 4;
+                        }
                     }
                 }
             }
@@ -259,9 +263,9 @@ public class Client : MonoBehaviour
             case "cmdDC":
                 //  PlayerDisconnected(int.Parse(splitData[1]));
                 break;
-            case "cmdASKPOS":
-                //  cmdAskPos(splitData);
-                break;
+            //case "rpcSENDCOMMAND":
+            //      (splitData);
+            //  break;
             case "cmdCLIENTREADY":
                 // SetClientReady(int.Parse(splitData[1]));
                 break;
@@ -270,10 +274,14 @@ public class Client : MonoBehaviour
                 break;
 
         }
+    }
 
+    public void cmdSendCommand(Command command)
+    {
+        string msg = "cmdSENDCOMMAND|" + command.ToString();
 
+        Send(msg, reliableChannel);
 
-     
     }
 
     public void cmdImReady()
@@ -345,6 +353,9 @@ public class Client : MonoBehaviour
         }
     }
 
+
+
+
     private void SpawnServerPlayer(string a_playerName, int cnnID)
     {
         if (cnnID != ourClientID)
@@ -353,7 +364,6 @@ public class Client : MonoBehaviour
             GameObject.Find("OtherUsername").GetComponent<Text>().text = other.name;
         }
 
-        Debug.Log(other.name + me.name);
 
     }
 
