@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 
     private GameObject findGameCanvas;
     private GameObject menuCanvas;
-    private GameObject hostGameCanvas;
+  //  private GameObject hostGameCanvas;
     private GameObject lobbyCanvas;
 
     private Client client;
@@ -62,7 +62,7 @@ public class UIManager : MonoBehaviour
         chatInput = GameObject.Find("ChatInput").GetComponent<InputField>();
         findGameCanvas = GameObject.Find("FindGame");
         menuCanvas = GameObject.Find("Menu");
-        hostGameCanvas = GameObject.Find("HostGame");
+    //    hostGameCanvas = GameObject.Find("HostGame");
         lobbyCanvas = GameObject.Find("Lobby");
     }
 

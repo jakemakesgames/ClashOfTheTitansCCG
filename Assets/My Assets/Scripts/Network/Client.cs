@@ -42,8 +42,6 @@ public class Client : MonoBehaviour
     //private float connectionTime;
     private bool isConnected = false;
 
-    private bool isReady = false;
-
     //private bool isStarted = false;
 
     private byte error;
@@ -223,6 +221,7 @@ public class Client : MonoBehaviour
                     else
                     {
                         //load the new scene
+                        SceneManager.LoadScene(1);
                     }
                 }
                 else
