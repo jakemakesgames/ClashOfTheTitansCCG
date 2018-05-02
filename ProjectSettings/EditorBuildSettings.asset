@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/My Assets/Scenes/BattleScene_Layout (BROKEN).unity
     guid: ddc807b5ed730e145b969badd2195b1f
   - enabled: 1
+    path: Assets/My Assets/Scenes/Menus/OptionsMenu_Temp.unity
+    guid: a7e829d14f8467547bbcfe62cb20a011
+  - enabled: 1
     path: Assets/My Assets/Scenes/Test Scenes/Jeremy Little/MenuTestScene.unity
     guid: 4722892c959cb354aba89be574eb08f9
   - enabled: 1
