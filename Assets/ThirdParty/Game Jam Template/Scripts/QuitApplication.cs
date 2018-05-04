@@ -1,7 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class QuitApplication : MonoBehaviour {
+
+	public string returnToMenuScene;
+
+	public void ReturnToMenu()
+	{
+		SceneManager.LoadScene (returnToMenuScene);
+	}
 
 	public void Quit()
 	{

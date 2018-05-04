@@ -21,6 +21,7 @@ public class ShowPanels : MonoBehaviour {
     public void ShowMenu()
     {
         menuPanel.SetActive(true);
+		pausePanel.SetActive(false);
         isActive = true;
     }
 

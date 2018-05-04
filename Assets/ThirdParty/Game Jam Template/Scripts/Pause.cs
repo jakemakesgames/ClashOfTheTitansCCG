@@ -18,6 +18,8 @@ public class Pause : MonoBehaviour {
 		showPanels = GetComponent<ShowPanels> ();
 		//Get a component reference to StartButton attached to this object, store in startScript variable
 		startScript = GetComponent<StartOptions> ();
+
+
 	}
 
 	// Update is called once per frame
@@ -71,6 +73,8 @@ public class Pause : MonoBehaviour {
     public void ReturnToMenu()
     {
         UnPause();
+		showPanels.HidePausePanel ();
+		showPanels.ShowMenu ();
 
         SceneManager.LoadScene(sceneName);
         //showPanels.HidePausePanel();
