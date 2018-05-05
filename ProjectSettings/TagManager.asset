@@ -12,6 +12,7 @@ TagManager:
   - TopPlayer
   - Server
   - Client
+  - PauseCanvas
   layers:
   - Default
   - TransparentFX
