@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneReloader: MonoBehaviour {
 
+	public string mainMenu;
+
     public void ReloadScene()
     {
         // Command has some static members, so let`s make sure that there are no commands in the Queue
@@ -15,4 +17,10 @@ public class SceneReloader: MonoBehaviour {
         Command.CommandExecutionComplete();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+	public void ReturnToMenu()
+	{
+		Debug.Log ("Returning to Main Menu");
+		SceneManager.LoadScene (mainMenu);
+	}
 }

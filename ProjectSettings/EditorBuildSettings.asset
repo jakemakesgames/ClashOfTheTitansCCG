@@ -5,15 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/My Assets/Scenes/BattleScene_Layout (BROKEN).unity
-    guid: ddc807b5ed730e145b969badd2195b1f
   - enabled: 1
-    path: Assets/My Assets/Scenes/Test Scenes/Jeremy Little/MenuTestScene.unity
-    guid: 4722892c959cb354aba89be574eb08f9
+    path: Assets/My Assets/Scenes/Menus/MainMenu_Temp.unity
+    guid: 3dfe9257c3e171e4da0c36ed30a0541a
   - enabled: 1
-    path: Assets/My Assets/Scenes/Test Scenes/Jeremy Little/GameScene.unity
-    guid: f3b9458411d70c849a2ec7efc2b842e0
-  - enabled: 0
-    path: Assets/My Assets/Scenes/Test Scenes/Jeremy Little/Server.unity
-    guid: 0f6dfde96a4cf6e40b72c8ab45d4edef
+    path: Assets/My Assets/Scenes/AIBattleScene.unity
+    guid: af12dc6320e056d44975aaf1f27f4465
