@@ -30,6 +30,9 @@ public class CardAsset : ScriptableObject
     public int AttacksForOneTurn = 1;
     public bool Taunt;
     public bool Charge;
+	public bool DeathRattle; // NOT WORKING YET //
+	public bool Adrenaline; // NOT WORKING YET //
+	public bool DevineShield; // NOT WORKING YET //
     public string CreatureScriptName;
     public int specialCreatureAmount;
 

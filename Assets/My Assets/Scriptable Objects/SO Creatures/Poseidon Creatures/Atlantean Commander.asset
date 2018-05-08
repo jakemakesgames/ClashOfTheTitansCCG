@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce515557b64d0d048baa701c20ac6211, type: 3}
+  m_Name: Atlantean Commander
+  m_EditorClassIdentifier: 
+  characterAsset: {fileID: 11400000, guid: 15b035ff79afc4846b18956b260319ce, type: 2}
+  Description: All friendly Poseidon creatures have +1/ +1
+  CardImage: {fileID: 0}
+  ManaCost: 7
+  rarity: Rare
+  MaxHealth: 6
+  Attack: 6
+  AttacksForOneTurn: 1
+  Taunt: 0
+  Charge: 0
+  DeathRattle: 0
+  Adrenaline: 0
+  DevineShield: 0
+  CreatureScriptName: 
+  specialCreatureAmount: 0
+  SpellScriptName: 
+  specialSpellAmount: 0
+  Targets: 0

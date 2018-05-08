@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum CharClass{ Elf, Monk, Warrior}
+public enum CharClass {Mage, Shaman, Warrior}
 
 public class CharacterAsset : ScriptableObject 
 {
