@@ -5249,7 +5249,7 @@ MonoBehaviour:
     type: 2}
   DamageEffectPrefab: {fileID: 1871432100486918, guid: c82025044e178934480be1e44e785cf0,
     type: 2}
-  ExplosionPrefab: {fileID: 1358934000485182, guid: 834912ff0b8545148b7bb9e07bb89b63,
+  ExplosionPrefab: {fileID: 1709544425841820, guid: 6e65c987598497344a0c5b0e128851f3,
     type: 2}
   EndTurnButton: {fileID: 1020048460}
   CoinCard: {fileID: 11400000, guid: a27beab42f4cf9e499ffea6a1ed13079, type: 2}
