@@ -21,6 +21,9 @@ MonoBehaviour:
   AttacksForOneTurn: 1
   Taunt: 0
   Charge: 0
+  DeathRattle: 0
+  Adrenaline: 0
+  DevineShield: 0
   CreatureScriptName: 
   specialCreatureAmount: 2
   SpellScriptName: 
