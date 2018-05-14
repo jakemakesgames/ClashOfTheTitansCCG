@@ -88,10 +88,12 @@ public class Player : MonoBehaviour, ICharacter
 	// TESTING ONLY //
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            DrawACard();
-        }
+		
+        //if (Input.GetKeyDown(KeyCode.D))
+        //{
+        //    DrawACard();
+        //}
+
     }
 
     public virtual void OnTurnStart()

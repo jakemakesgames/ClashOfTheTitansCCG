@@ -14,9 +14,12 @@ public abstract class CreatureEffect
         this.specialAmount = specialAmount;
     }
 
-    public abstract void RegisterEffect();
+	// METHODS FOR SPECIAL FX THAT LISTEN TO EVENTS
+    public abstract void RegisterEventEffect();
 
-    public abstract void CauseEffect();
+	public abstract void UnRegisterEventEffect ();
+
+    public abstract void CauseEventEffect();
 
     // BATTLECRY
     public virtual void WhenACreatureIsPlayed(){}
