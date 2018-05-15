@@ -23,7 +23,7 @@ public class BiteOwner : CreatureEffect
         new DealDamageCommand(owner.PlayerID, specialAmount, owner.Health - specialAmount).AddToQueue();
         owner.Health -= specialAmount;
 
-		UnRegisterEventEffect (); // Put this line here and test to see if this card ownly bites the owner once
+		owner.EndTurnEvent -= CauseEventEffect;
     }
 
 

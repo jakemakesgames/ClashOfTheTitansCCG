@@ -24,7 +24,7 @@ MonoBehaviour:
   DeathRattle: 0
   Adrenaline: 0
   DevineShield: 0
-  CreatureScriptName: 
+  CreatureScriptName: BiteOwner
   specialCreatureAmount: 2
   SpellScriptName: 
   specialSpellAmount: 0
