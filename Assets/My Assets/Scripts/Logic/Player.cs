@@ -26,6 +26,14 @@ public class Player : MonoBehaviour, ICharacter
         get{ return manaThisTurn;}
         set
         {
+
+//			if (value < 0)
+//				manaThisTurn = 0;
+//			else if (value > PArea.ManaBar.Crystals.Length)
+//				manaThisTurn = PArea.ManaBar.Crystals.Length;
+//			else
+//				manaThisTurn = value;
+
             manaThisTurn = value;
             //PArea.ManaBar.TotalCrystals = manaThisTurn;
             new UpdateManaCrystalsCommand(this, manaThisTurn, manaLeft).AddToQueue();
@@ -39,6 +47,14 @@ public class Player : MonoBehaviour, ICharacter
         { return manaLeft;}
         set
         {
+
+//			if (value < 0)
+//				manaThisTurn = 0;
+//			else if (value > PArea.ManaBar.Crystals.Length)
+//				manaThisTurn = PArea.ManaBar.Crystals.Length;
+//			else
+//				manaThisTurn = value;
+
             manaLeft = value;
             //PArea.ManaBar.AvailableCrystals = manaLeft;
             new UpdateManaCrystalsCommand(this, ManaThisTurn, manaLeft).AddToQueue();
@@ -65,9 +81,12 @@ public class Player : MonoBehaviour, ICharacter
         get { return health;}
         set
         {
-            health = value;
-            if (value <= 0)
-                Die(); 
+			if (value > charAsset.MaxHealth)
+				health = charAsset.MaxHealth;
+			else
+				health = value;
+			if (value <= 0)
+				Die ();
         }
     }
 

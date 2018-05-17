@@ -54,14 +54,35 @@ public class DamageEffect : MonoBehaviour {
    
     public static void CreateDamageEffect(Vector3 position, int amount)
     {
-        // Instantiate a DamageEffect from prefab
-        GameObject newDamageEffect =  GameObject.Instantiate(GlobalSettings.Instance.DamageEffectPrefab, position, Quaternion.identity) as GameObject;
-        //newDamageEffect = GameObject.Instantiate(DamageEffectTest.Instance.DamagePrefab, position, Quaternion.identity) as GameObject;
-        // Get DamageEffect component in this new game object
-        DamageEffect de = newDamageEffect.GetComponent<DamageEffect>();
-        // Change the amount text to reflect the amount of damage dealt
-        de.AmountText.text = "-"+amount.ToString();
-        // start a coroutine to fade away and delete this effect after a certain time
-        de.StartCoroutine(de.ShowDamageEffect());
+		// TRYING OUT THIS NEW CODE, IF IT BREAKS SHIT - USE COMMENTED CODE BELOW //
+		if (amount == 0)
+			return;
+
+		// Instantiate a DamageEffect prefab
+		GameObject newDamageEffect = GameObject.Instantiate(GlobalSettings.Instance.DamageEffectPrefab, position, Quaternion.identity) as GameObject;
+		// Get DamageEffect component in this new gameobject
+		DamageEffect de = newDamageEffect.GetComponent<DamageEffect>();
+		// Change the amount text to reflect the amount of damage delt
+		if (amount < 0) {
+			// NEGATIVE DAMAGE CAN WORK AS 'HEALING'
+			de.AmountText.text = "+" + (-amount).ToString ();
+			de.DamageImage.color = Color.green;
+		} else {
+			de.AmountText.text = "-" + amount.ToString ();
+		}
+		// Start a coroutine to fade away and delete this effect after a certain time
+		de.StartCoroutine(de.ShowDamageEffect());
+
+
+// OLD CODE //
+//        // Instantiate a DamageEffect from prefab
+//        GameObject newDamageEffect =  GameObject.Instantiate(GlobalSettings.Instance.DamageEffectPrefab, position, Quaternion.identity) as GameObject;
+//        //newDamageEffect = GameObject.Instantiate(DamageEffectTest.Instance.DamagePrefab, position, Quaternion.identity) as GameObject;
+//        // Get DamageEffect component in this new game object
+//        DamageEffect de = newDamageEffect.GetComponent<DamageEffect>();
+//        // Change the amount text to reflect the amount of damage dealt
+//        de.AmountText.text = "-"+amount.ToString();
+//        // start a coroutine to fade away and delete this effect after a certain time
+//        de.StartCoroutine(de.ShowDamageEffect());
     }
 }

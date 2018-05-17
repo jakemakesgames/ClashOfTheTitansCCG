@@ -1720,6 +1720,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: 1
   HeightOfOneCard: 0.012
+--- !u!114 &485121018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 485121016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c362d540955bfb84fb936f6659677033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: Deck
+  objectInfo: you have X amount of cards left
+  toolTipWindow: {fileID: 1867343374215932, guid: de01ed1c51a71b542b41d15b8000e4c6,
+    type: 2}
+  displayName: {fileID: 114299724323462508, guid: de01ed1c51a71b542b41d15b8000e4c6,
+    type: 2}
+  displayInfo: {fileID: 114336084285846214, guid: de01ed1c51a71b542b41d15b8000e4c6,
+    type: 2}
 --- !u!1001 &507126105
 Prefab:
   m_ObjectHideFlags: 0
